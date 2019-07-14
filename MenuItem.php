@@ -6,9 +6,6 @@
  */
 namespace PhpTheme\Bootstrap4;
 
-class Table extends \PhpTheme\Html\Table
+class MenuItem extends \PhpTheme\Html\MenuItem
 {
-
-    const TABLE_COLUMN = TableColumn::class;
-
 }
