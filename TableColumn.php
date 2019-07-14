@@ -8,7 +8,7 @@ namespace PhpTheme\Bootstrap4;
 
 use PhpTheme\Helpers\Html;
 
-class TableColumn extends \PhpTheme\Core\TableColumn
+class TableColumn extends \PhpTheme\Html\TableColumn
 {
 
     public $displayExtraSmallOptions = ['class' => ['d-none', 'd-table-cell']];
