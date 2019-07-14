@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpTheme\Bootstrap4Theme;
+namespace PhpTheme\Bootstrap4;
 
 use BasicApp\Core\Html;
 
