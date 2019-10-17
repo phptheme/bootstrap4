@@ -11,4 +11,11 @@ class Menu extends \PhpTheme\Html\Menu
 
     const MENU_ITEM = MenuItem::class;
 
+    public $tag = 'ul';
+
+    public function run()
+    {
+        return $this->render();
+    }
+
 }

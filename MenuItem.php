@@ -8,4 +8,14 @@ namespace PhpTheme\Bootstrap4;
 
 class MenuItem extends \PhpTheme\Html\MenuItem
 {
+
+    public $tag = 'li';
+
+    protected $submenuClass = Menu::class;
+
+    public function run()
+    {
+        return $this->render();
+    }
+
 }
