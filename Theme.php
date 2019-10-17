@@ -6,9 +6,24 @@
  */
 namespace PhpTheme\Bootstrap4;
 
+use PhpTheme\Html\HtmlHelper;
+
 class Theme extends \PhpTheme\Core\Theme
 {
 
     const TABLE = Table::class;
+
+    public $defaultTable = [];
+
+    public $table = [];
+
+    public function table(array $options = [])
+    {
+        $options = HtmlHelper::mergeAttributes($this->defaultTable, $this->table, $options);
+
+        $table = $this->createWidget(static::TABLE, $options);
+
+        return $table->render();
+    }
 
 }

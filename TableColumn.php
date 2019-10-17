@@ -21,13 +21,17 @@ class TableColumn extends \PhpTheme\Html\TableColumn
 
     public $displayExtraLargeOptions = ['class' => ['d-none', 'd-xl-table-cell']];
 
+    public $headerOptions = [];
+
+    public $footerOptions = [];
+
     public function displayExtraSmall()
     {
         $this->options = HtmlHelper::mergeAttributes($this->options, $this->displayExtraSmallOptions);
-
-        $this->table->headerOptions = HtmlHelper::mergeAttributes($this->table->headerOptions, $this->displayExtraSmallOptions);
-
-        $this->table->footerOptions = HtmlHelper::mergeAttributes($this->table->footerOptions, $this->displayExtraSmallOptions);
+        
+        $this->headerOptions = HtmlHelper::mergeAttributes($this->headerOptions, $this->displayExtraSmallOptions);
+        
+        $this->footerOptions = HtmlHelper::mergeAttributes($this->footerOptions, $this->displayExtraSmallOptions);
 
         return $this;
     }
@@ -36,9 +40,9 @@ class TableColumn extends \PhpTheme\Html\TableColumn
     {
         $this->options = HtmlHelper::mergeAttributes($this->options, $this->displaySmallOptions);
 
-        $this->table->headerOptions = HtmlHelper::mergeAttributes($this->table->headerOptions, $this->displaySmallOptions);
+        $this->headerOptions = HtmlHelper::mergeAttributes($this->headerOptions, $this->displaySmallOptions);
 
-        $this->table->footerOptions = HtmlHelper::mergeAttributes($this->table->footerOptions, $this->displaySmallOptions);
+        $this->footerOptions = HtmlHelper::mergeAttributes($this->footerOptions, $this->displaySmallOptions);
 
         return $this;
     }
@@ -47,9 +51,9 @@ class TableColumn extends \PhpTheme\Html\TableColumn
     {
         $this->options = HtmlHelper::mergeAttributes($this->options, $this->displayMediumOptions);
 
-        $this->table->headerOptions = HtmlHelper::mergeAttributes($this->table->headerOptions, $this->displayMediumOptions);
+        $this->headerOptions = HtmlHelper::mergeAttributes($this->headerOptions, $this->displayMediumOptions);
 
-        $this->table->footerOptions = HtmlHelper::mergeAttributes($this->table->footerOptions, $this->displayMediumOptions);
+        $this->footerOptions = HtmlHelper::mergeAttributes($this->footerOptions, $this->displayMediumOptions);
 
         return $this;
     }
@@ -58,9 +62,9 @@ class TableColumn extends \PhpTheme\Html\TableColumn
     {
         $this->options = HtmlHelper::mergeAttributes($this->options, $this->displayLargeOptions);
 
-        $this->table->headerOptions = HtmlHelper::mergeAttributes($this->table->headerOptions, $this->displayLargeOptions);
+        $this->headerOptions = HtmlHelper::mergeAttributes($this->headerOptions, $this->displayLargeOptions);
 
-        $this->table->footerOptions = HtmlHelper::mergeAttributes($this->table->footerOptions, $this->displayLargeOptions);
+        $this->footerOptions = HtmlHelper::mergeAttributes($this->footerOptions, $this->displayLargeOptions);
 
         return $this;
     }    
@@ -69,9 +73,9 @@ class TableColumn extends \PhpTheme\Html\TableColumn
     {
         $this->options = HtmlHelper::mergeAttributes($this->options, $this->displayExtraLargeOptions);
 
-        $this->table->headerOptions = HtmlHelper::mergeAttributes($this->table->headerOptions, $this->displayExtraLargeOptions);
+        $this->headerOptions = HtmlHelper::mergeAttributes($this->headerOptions, $this->displayExtraLargeOptions);
 
-        $this->table->footerOptions = HtmlHelper::mergeAttributes($this->table->footerOptions, $this->displayExtraLargeOptions);
+        $this->footerOptions = HtmlHelper::mergeAttributes($this->footerOptions, $this->displayExtraLargeOptions);
 
         return $this;
     }
