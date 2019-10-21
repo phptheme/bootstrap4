@@ -23,7 +23,11 @@ class Theme extends \PhpTheme\Core\Theme
     {
         $options = HtmlHelper::mergeAttributes($this->defaultTable, $this->table, $options);
 
-        $table = $this->createWidget(static::TABLE, $options);
+        $options['theme'] = $this;
+
+        $class = static::TABLE;
+
+        $table = $class::factory($options);
 
         return $table->render();
     }

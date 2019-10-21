@@ -11,4 +11,6 @@ class Table extends \PhpTheme\Html\Table
 
     const TABLE_COLUMN = TableColumn::class;
 
+    public $theme;
+
 }
