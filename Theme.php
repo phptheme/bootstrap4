@@ -11,6 +11,8 @@ use PhpTheme\Html\HtmlHelper;
 class Theme extends \PhpTheme\Core\Theme
 {
 
+    const BREADCRUMBS = Breadcrumbs::class;
+
     const TABLE = Table::class;
 
     public $defaultTable = [];
@@ -25,5 +27,10 @@ class Theme extends \PhpTheme\Core\Theme
 
         return $table->render();
     }
+
+    public function breadcrumbs(array $params = [])
+    {
+        return $this->widget(static::BREADCRUMBS, $params);
+    }       
 
 }
