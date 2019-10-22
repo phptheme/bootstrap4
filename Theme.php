@@ -4,55 +4,37 @@
  * @link http://getphptheme.com
  * @license MIT License
  */
-namespace PhpTheme\Bootstrap4Theme;
+namespace PhpTheme\Bootstrap4;
 
-class Theme extends \PhpTheme\Bootstrap4\Theme
+use PhpTheme\Html\HtmlHelper;
+
+class Theme extends \PhpTheme\Core\Theme
 {
 
-    const LAYOUT = Layout::class;
+    const BREADCRUMBS = Breadcrumbs::class;
 
-    const MAIN_LAYOUT = MainLayout::class;
+    const TABLE = Table::class;
 
-    const MAIN_MENU = MainMenu::class;
+    public $defaultTable = [];
 
-    const ACTION_MENU = ActionMenu::class;
+    public $table = [];
 
-    protected $_layout;
-
-    public function beginLayout(array $params = [])
+    public function table(array $options = [])
     {
-        $this->_layout = $this->beginWidget(static::LAYOUT, $params);
+        $options = HtmlHelper::mergeAttributes($this->defaultTable, $this->table, $options);
 
-        return $this->_layout;
+        $options['theme'] = $this;
+
+        $class = static::TABLE;
+
+        $table = $class::factory($options);
+
+        return $table->render();
     }
 
-    public function endLayout()
+    public function breadcrumbs(array $params = [])
     {
-        $this->endWidget($this->_layout);
-    }
-
-    public function layout(array $params = [])
-    {
-        return $this->widget(static::LAYOUT, $params);
-    }
-
-    public function mainLayout(array $params = [])
-    {
-        return $this->widget(static::MAIN_LAYOUT, $params);
-    }
-
-    public function mainMenu(array $params = [])
-    {
-        $class = static::MAIN_MENU;
-
-        return $class::factory($params)->render();
-    }
-
-    public function actionMenu(array $params = [])
-    {
-        $class = static::ACTION_MENU;
-
-        return $class::factory($params)->render();
-    }
+        return $this->widget(static::BREADCRUMBS, $params);
+    }       
 
 }
