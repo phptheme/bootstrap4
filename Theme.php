@@ -15,13 +15,11 @@ class Theme extends \PhpTheme\Core\Theme
 
     const TABLE = Table::class;
 
-    public $defaultTable = [];
-
-    public $table = [];
+    public $tableOptions = [];
 
     public function table(array $options = [])
     {
-        $options = HtmlHelper::mergeAttributes($this->defaultTable, $this->table, $options);
+        $options = HtmlHelper::mergeAttributes($this->tableOptions, $options);
 
         $options['theme'] = $this;
 
@@ -35,6 +33,6 @@ class Theme extends \PhpTheme\Core\Theme
     public function breadcrumbs(array $params = [])
     {
         return $this->widget(static::BREADCRUMBS, $params);
-    }       
+    }
 
 }
