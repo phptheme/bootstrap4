@@ -19,7 +19,7 @@ class Theme extends \PhpTheme\Core\Theme
 
     public function table(array $options = [])
     {
-        $options = HtmlHelper::mergeAttributes($this->tableOptions, $options);
+        $options = HtmlHelper::mergeOptions($this->tableOptions, $options);
 
         $options['theme'] = $this;
 

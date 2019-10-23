@@ -11,15 +11,15 @@ use PhpTheme\Html\HtmlHelper;
 class TableColumn extends \PhpTheme\Html\TableColumn
 {
 
-    public $displayExtraSmallOptions = ['class' => ['d-none', 'd-table-cell']];
+    public $displayExtraSmallAttributes = ['class' => ['d-none', 'd-table-cell']];
 
-    public $displaySmallOptions = ['class' => ['d-none', 'd-sm-table-cell']];
+    public $displaySmallAttributes = ['class' => ['d-none', 'd-sm-table-cell']];
 
-    public $displayMediumOptions = ['class' => ['d-none', 'd-md-table-cell']];
+    public $displayMediumAttributes = ['class' => ['d-none', 'd-md-table-cell']];
 
-    public $displayLargeOptions = ['class' => ['d-none', 'd-lg-table-cell']];
+    public $displayLargeAttributes = ['class' => ['d-none', 'd-lg-table-cell']];
 
-    public $displayExtraLargeOptions = ['class' => ['d-none', 'd-xl-table-cell']];
+    public $displayExtraLargeAttributes = ['class' => ['d-none', 'd-xl-table-cell']];
 
     public $headerOptions = [];
 
@@ -27,55 +27,55 @@ class TableColumn extends \PhpTheme\Html\TableColumn
 
     public function displayExtraSmall()
     {
-        $this->options = HtmlHelper::mergeAttributes($this->options, $this->displayExtraSmallOptions);
+        $this->attributes = HtmlHelper::mergeAttributes($this->attributes, $this->displayExtraSmallAttributes);
         
-        $this->headerOptions = HtmlHelper::mergeAttributes($this->headerOptions, $this->displayExtraSmallOptions);
+        $this->headerOptions = HtmlHelper::mergeOptions($this->headerOptions, ['attributes' => $this->displayExtraSmallAttributes]);
         
-        $this->footerOptions = HtmlHelper::mergeAttributes($this->footerOptions, $this->displayExtraSmallOptions);
+        $this->footerOptions = HtmlHelper::mergeOptions($this->footerOptions, ['attributes' => $this->displayExtraSmallAttributes]);
 
         return $this;
     }
 
     public function displaySmall()
     {
-        $this->options = HtmlHelper::mergeAttributes($this->options, $this->displaySmallOptions);
+        $this->attributes = HtmlHelper::mergeAttributes($this->attributes, $this->displaySmallAttributes);
 
-        $this->headerOptions = HtmlHelper::mergeAttributes($this->headerOptions, $this->displaySmallOptions);
+        $this->headerOptions = HtmlHelper::mergeOptions($this->headerOptions, ['attributes' => $this->displaySmallAttributes]);
 
-        $this->footerOptions = HtmlHelper::mergeAttributes($this->footerOptions, $this->displaySmallOptions);
+        $this->footerOptions = HtmlHelper::mergeOptions($this->footerOptions, ['attributes' => $this->displaySmallAttributes]);
 
         return $this;
     }
 
     public function displayMedium()
     {
-        $this->options = HtmlHelper::mergeAttributes($this->options, $this->displayMediumOptions);
+        $this->attributes = HtmlHelper::mergeAttributes($this->attributes, $this->displayMediumAttributes);
 
-        $this->headerOptions = HtmlHelper::mergeAttributes($this->headerOptions, $this->displayMediumOptions);
+        $this->headerOptions = HtmlHelper::mergeOptions($this->headerOptions, ['attributes' => $this->displayMediumAttributes]);
 
-        $this->footerOptions = HtmlHelper::mergeAttributes($this->footerOptions, $this->displayMediumOptions);
+        $this->footerOptions = HtmlHelper::mergeOptions($this->footerOptions, ['attributes' => $this->displayMediumAttributes]);
 
         return $this;
     }
 
     public function displayLarge()
     {
-        $this->options = HtmlHelper::mergeAttributes($this->options, $this->displayLargeOptions);
+        $this->attributes = HtmlHelper::mergeAttributes($this->attributes, $this->displayLargeAttributes);
 
-        $this->headerOptions = HtmlHelper::mergeAttributes($this->headerOptions, $this->displayLargeOptions);
+        $this->headerOptions = HtmlHelper::mergeOptions($this->headerOptions, ['attributes' => $this->displayLargeAttributes]);
 
-        $this->footerOptions = HtmlHelper::mergeAttributes($this->footerOptions, $this->displayLargeOptions);
+        $this->footerOptions = HtmlHelper::mergeOptions($this->footerOptions, ['attributes' => $this->displayLargeAttributes]);
 
         return $this;
     }    
 
     public function displayExtraLarge()
     {
-        $this->options = HtmlHelper::mergeAttributes($this->options, $this->displayExtraLargeOptions);
+        $this->attributes = HtmlHelper::mergeAttributes($this->attributes, $this->displayExtraLargeAttributes);
 
-        $this->headerOptions = HtmlHelper::mergeAttributes($this->headerOptions, $this->displayExtraLargeOptions);
+        $this->headerOptions = HtmlHelper::mergeOptions($this->headerOptions, ['attributes' => $this->displayExtraLargeAttributes]);
 
-        $this->footerOptions = HtmlHelper::mergeAttributes($this->footerOptions, $this->displayExtraLargeOptions);
+        $this->footerOptions = HtmlHelper::mergeOptions($this->footerOptions, ['attributes' => $this->displayExtraLargeAttributes]);
 
         return $this;
     }
