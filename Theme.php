@@ -19,35 +19,29 @@ class Theme extends \PhpTheme\Core\Theme
 
     public $tableOptions = [];
 
+    public $breadcrumbsOptions = [];
+
     public $messageOptions = [];
 
     public function table(array $options = [])
     {
         $options = HtmlHelper::mergeOptions($this->tableOptions, $options);
 
-        $options['theme'] = $this;
-
-        $class = static::TABLE;
-
-        $table = $class::factory($options);
-
-        return $table->render();
+        return $this->widget(static::TABLE, $options);        
     }
 
-    public function breadcrumbs(array $params = [])
+    public function breadcrumbs(array $options = [])
     {
-        return $this->widget(static::BREADCRUMBS, $params);
+        $options = HtmlHelper::mergeOptions($this->breadcrumbsOptions, $options);
+
+        return $this->widget(static::BREADCRUMBS, $options);
     }
 
-    public function message(array $params = [])
+    public function message(array $options = [])
     {
-        $params = HtmlHelper::mergeOptions($this->messageOptions, $params);
+        $options = HtmlHelper::mergeOptions($this->messageOptions, $options);
 
-        $class = static::MESSAGE;
-
-        $message = $class::factory($params);
-
-        return $message->render();
+        return $this->widget(static::MESSAGE, $params);
     }
 
 }

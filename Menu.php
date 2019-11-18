@@ -13,9 +13,4 @@ class Menu extends \PhpTheme\Html\Menu
 
     public $tag = 'ul';
 
-    public function run()
-    {
-        return $this->render();
-    }
-
 }

@@ -35,7 +35,7 @@ class Message extends \PhpTheme\Html\Tag
         'class' => 'alert alert-success'
     ];    
 
-    public function render()
+    public function toString() : string
     {
         switch ($this->type)
         {
@@ -58,17 +58,12 @@ class Message extends \PhpTheme\Html\Tag
             break;
         }
 
-        return parent::render();
+        return parent::toString();
     }
 
     public function getContent()
     {
         return $this->message;
-    }
-
-    public function run()
-    {
-        return $this->render();
     }
 
 }

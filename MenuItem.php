@@ -13,9 +13,4 @@ class MenuItem extends \PhpTheme\Html\MenuItem
 
     public $tag = 'li';
 
-    public function run()
-    {
-        return $this->render();
-    }
-
 }
