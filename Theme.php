@@ -15,7 +15,11 @@ class Theme extends \PhpTheme\Core\Theme
 
     const TABLE = Table::class;
 
+    const MESSAGE = Message::class;
+
     public $tableOptions = [];
+
+    public $messageOptions = [];
 
     public function table(array $options = [])
     {
@@ -33,6 +37,17 @@ class Theme extends \PhpTheme\Core\Theme
     public function breadcrumbs(array $params = [])
     {
         return $this->widget(static::BREADCRUMBS, $params);
+    }
+
+    public function message(array $params = [])
+    {
+        $params = HtmlHelper::mergeOptions($this->messageOptions, $params);
+
+        $class = static::MESSAGE;
+
+        $message = $class::factory($params);
+
+        return $message->render();
     }
 
 }
