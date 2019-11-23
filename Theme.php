@@ -41,7 +41,7 @@ class Theme extends \PhpTheme\Core\Theme
     {
         $options = HtmlHelper::mergeOptions($this->messageOptions, $options);
 
-        return $this->widget(static::MESSAGE, $params);
+        return $this->widget(static::MESSAGE, $options);
     }
 
 }
