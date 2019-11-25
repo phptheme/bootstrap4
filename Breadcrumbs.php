@@ -34,4 +34,25 @@ class Breadcrumbs extends \PhpTheme\Html\Menu
         return parent::createItem($params);
     }
 
+    public function getItems() : array
+    {
+        $return = parent::getItems();
+
+        $keys = array_keys($return);
+
+        if ($keys)
+        {
+            $last = array_pop($keys);
+
+            $lastItem = $return[$last];
+
+            if ($lastItem->url)
+            {
+                $lastItem->url = null;
+            }
+        }
+
+        return $return;
+    }
+
 }
