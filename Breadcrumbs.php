@@ -24,4 +24,14 @@ class Breadcrumbs extends \PhpTheme\Html\Menu
         return $return;
     }
 
+    public function createItem($params = [])
+    {
+        if (!is_array($params))
+        {
+            $params = ['label' => $params]; 
+        }
+
+        return parent::createItem($params);
+    }
+
 }
