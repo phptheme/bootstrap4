@@ -6,11 +6,15 @@
  */
 namespace PhpTheme\Bootstrap4;
 
-class Menu extends \PhpTheme\Html\Menu
+class UserMenu extends Menu
 {
 
-    const MENU_ITEM = MenuItem::class;
+    const MENU_ITEM = UserMenuItem::class;
 
     public $tag = 'ul';
 
+    public $attributes = [
+        'class' => 'nav flex-column'
+    ];
+    
 }

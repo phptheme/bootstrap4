@@ -6,11 +6,11 @@
  */
 namespace PhpTheme\Bootstrap4;
 
-class Table extends \PhpTheme\Html\Table
+class MainMenu2Item extends MenuItem
 {
 
-    const TABLE_COLUMN = TableColumn::class;
+    public $tag = false;
 
-    public $theme;
+    public $linkAttributes = ['class' => 'dropdown-item'];
 
 }

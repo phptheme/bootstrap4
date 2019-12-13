@@ -1,8 +1,8 @@
 <?php
 /**
- * @copyright Copyright (c) 2018-2019 PhpTheme Dev Team
+ * @author PhpTheme Dev Team <dev@getphptheme.com>
  * @link http://getphptheme.com
- * @license MIT License
+ * @license MIT
  */
 namespace PhpTheme\Bootstrap4;
 

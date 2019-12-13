@@ -7,6 +7,9 @@
         }
     },
     "require": {
-        "phptheme/core": "dev-master"
+        "phptheme/core": "*",
+        "phptheme/html": "*",
+        "phptheme/html-table": "*",
+        "phptheme/html-menu": "*"
     }
 }

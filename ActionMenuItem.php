@@ -6,11 +6,17 @@
  */
 namespace PhpTheme\Bootstrap4;
 
-class MenuItem extends \PhpTheme\Html\MenuItem
+class ActionMenuItem extends MenuItem
 {
 
-    const SUBMENU = Menu::class;
-
     public $tag = 'li';
+
+    public $attributes = [
+        'class' => 'nav-item'
+    ];
+
+    public $linkAttributes = [
+        'class' => 'nav-link'
+    ];
 
 }
