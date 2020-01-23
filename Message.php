@@ -8,7 +8,7 @@ namespace PhpTheme\Bootstrap4;
 
 use PhpTheme\Html\HtmlHelper;
 
-class Message extends \PhpTheme\Html\Tag
+class Message extends \PhpTheme\Core\Tag
 {
 
     public $type = 'info';
