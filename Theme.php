@@ -69,7 +69,7 @@ class Theme extends \PhpTheme\Core\Theme
     {
         $options = HtmlHelper::mergeOptions($this->tableOptions, $options);
 
-        return $this->widget(static::TABLE, $options);        
+        return $this->widget(static::TABLE, array_merge($options, ['theme' => $this]));        
     }
 
     public function breadcrumbs(array $options = [])
@@ -88,7 +88,7 @@ class Theme extends \PhpTheme\Core\Theme
 
     public function beginLayout(array $options = [])
     {
-        $this->_layout = $this->beginWidget(static::LAYOUT, $options);
+        $this->_layout = $this->beginWidget(static::LAYOUT, array_merge($options, ['theme' => $this]));
 
         return $this->_layout;
     }
@@ -100,14 +100,14 @@ class Theme extends \PhpTheme\Core\Theme
 
     public function layout(array $options = [])
     {
-        $options = HtmlHelper::mergeOptions($this->layoutOptions, $options);
+        $options = HtmlHelper::mergeOptions($this->layoutOptions, array_merge($options, ['theme' => $this]));
 
         return $this->widget(static::LAYOUT, $options);
     }
 
     public function mainLayout(array $options = [])
     {
-        $options = HtmlHelper::mergeOptions($this->mainLayoutOptions, $options);
+        $options = HtmlHelper::mergeOptions($this->mainLayoutOptions, array_merge($options, ['theme' => $this]));
 
         return $this->widget(static::MAIN_LAYOUT, $options);
     }
