@@ -6,9 +6,9 @@
  */
 namespace PhpTheme\Bootstrap4;
 
-use PhpTheme\Html\HtmlHelper;
+use PhpTheme\HtmlHelper\HtmlHelper;
 
-class Message extends \PhpTheme\Core\Tag
+class Message extends \PhpTheme\Tag\Tag
 {
 
     public $type = 'info';

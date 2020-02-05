@@ -6,7 +6,7 @@
  */
 namespace PhpTheme\Bootstrap4;
 
-class Table extends \PhpTheme\Html\Table
+class Table extends \PhpTheme\Table\Table
 {
 
     const TABLE_COLUMN = TableColumn::class;

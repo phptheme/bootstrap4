@@ -6,7 +6,7 @@
  */
 namespace PhpTheme\Bootstrap4;
 
-class Menu extends \PhpTheme\Html\Menu
+class Menu extends \PhpTheme\Menu\Menu
 {
 
     const MENU_ITEM = MenuItem::class;

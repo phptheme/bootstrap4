@@ -6,9 +6,9 @@
  */
 namespace PhpTheme\Bootstrap4;
 
-use PhpTheme\Core\HtmlHelper;
+use PhpTheme\HtmlHelper\HtmlHelper;
 
-class BreadcrumbsItem extends \PhpTheme\Html\MenuItem
+class BreadcrumbsItem extends \PhpTheme\Menu\MenuItem
 {
 
     public $attributes = [
