@@ -11,6 +11,8 @@ use PhpTheme\Core\HtmlHelper;
 class Breadcrumbs extends \PhpTheme\Html\Menu
 {
 
+    public $theme;
+
     const MENU_ITEM = BreadcrumbsItem::class;
 
     public $tag = 'ol';

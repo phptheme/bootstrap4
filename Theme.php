@@ -76,7 +76,7 @@ class Theme extends \PhpTheme\Core\Theme
     {
         $options = HtmlHelper::mergeOptions($this->breadcrumbsOptions, $options);
 
-        return $this->widget(static::BREADCRUMBS, $options);
+        return $this->widget(static::BREADCRUMBS, array_merge($options, ['theme' => $this]));
     }
 
     public function message(array $options = [])
