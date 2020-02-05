@@ -6,7 +6,7 @@
  */
 namespace PhpTheme\Bootstrap4;
 
-class Layout extends \PhpTheme\Core\ThemeWidget
+class Layout extends \PhpTheme\Core\Widget
 {
 
     public $title;

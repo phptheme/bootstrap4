@@ -6,7 +6,7 @@
  */
 namespace PhpTheme\Bootstrap4;
 
-class Page extends \PhpTheme\Core\ThemeWidget
+class Page extends \PhpTheme\Core\Widget
 {
 
     public $title;
