@@ -6,9 +6,9 @@
  */
 namespace PhpTheme\Bootstrap4;
 
-use PhpTheme\HtmlHelper\HtmlHelper;
+use PhpTheme\Core\HtmlHelper;
 
-class Theme extends \PhpTheme\Theme\Theme
+class Theme extends \PhpTheme\Core\Theme
 {
 
     const BREADCRUMBS = Breadcrumbs::class;
