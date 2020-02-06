@@ -17,6 +17,12 @@ class Theme extends \PhpTheme\Theme\Theme
 
     const MESSAGE = Message::class;
 
+    const GRID = Grid::class;    
+
+    const GRID_HEADER = GridHeader::class;
+
+    const GRID_CELL = GridCell::class;
+
     public $breadcrumbsOptions = [];
  
     public $tableOptions = [];
@@ -42,6 +48,21 @@ class Theme extends \PhpTheme\Theme\Theme
         $options = HtmlHelper::mergeOptions($this->messageOptions, $options);
 
         return $this->widget(static::MESSAGE, $options);
+    }
+
+    public function grid(array $params = [])
+    {
+        return $this->widget(static::GRID, array_merge($params, ['theme' => $this]));
+    }
+
+    public function createGridCell(array $params = [])
+    {
+        return $this->createWidget(static::GRID_CELL, $params);
+    }
+
+    public function createGridHeader(array $params = [])
+    {
+        return $this->createWidget(static::GRID_HEADER, $params);
     }
 
 }
