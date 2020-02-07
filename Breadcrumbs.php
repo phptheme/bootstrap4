@@ -25,7 +25,10 @@ class Breadcrumbs extends \PhpTheme\Menu\Menu
     {
         $return = parent::toString();
 
-        $return = HtmlHelper::tag('div', $return, ['aria-label' => 'breadcrumb']);
+        if ($return)
+        {
+            $return = HtmlHelper::tag('div', $return, ['aria-label' => 'breadcrumb']);
+        }
 
         return $return;
     }
