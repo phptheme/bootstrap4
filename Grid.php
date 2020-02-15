@@ -17,23 +17,11 @@ class Grid extends \PhpTheme\Core\Grid
 
     public $theme;
 
-    public $attributes = ['class' => 'table table-hover table-outline table-vcenter text-nowrap card-table'];
+    public $defaultAttributes = ['class' => 'table table-hover table-outline table-vcenter text-nowrap card-table'];
 
     public function getTheme()
     {
         return $this->theme;
-    }
-
-    public function toString() : string
-    {
-        $return = parent::toString();
-
-        if ($return)
-        {
-            return HtmlHelper::tag('div', $return, ['class' => 'table-responsive']);
-        }
-
-        return $return;
     }
 
 }
