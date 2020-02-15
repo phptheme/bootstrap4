@@ -7,10 +7,6 @@
         }
     },
     "require": {
-        "phptheme/html-helper": "*",
-        "phptheme/theme": "*",
-        "phptheme/menu": "*",
-        "phptheme/table": "*",
-        "phptheme/tag": "*"
+        "phptheme/core": "*"
     }
 }

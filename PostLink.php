@@ -6,12 +6,8 @@
  */
 namespace PhpTheme\Bootstrap4;
 
-class Menu extends \PhpTheme\Core\Menu
+class PostLink extends \PhpTheme\Core\PostLink
 {
-
-    const MENU_ITEM = MenuItem::class;
-
-    public $tag = 'ul';
 
     public $theme;
 
@@ -19,5 +15,4 @@ class Menu extends \PhpTheme\Core\Menu
     {
         return $this->theme;
     }
-
 }

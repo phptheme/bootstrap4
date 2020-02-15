@@ -6,13 +6,9 @@
  */
 namespace PhpTheme\Bootstrap4;
 
-class Menu extends \PhpTheme\Core\Menu
+class Link extends \PhpTheme\Core\Link
 {
-
-    const MENU_ITEM = MenuItem::class;
-
-    public $tag = 'ul';
-
+    
     public $theme;
 
     public function getTheme()

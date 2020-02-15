@@ -6,28 +6,26 @@
  */
 namespace PhpTheme\Bootstrap4;
 
-use PhpTheme\HtmlHelper\HtmlHelper;
+use PhpTheme\Core\HtmlHelper;
 
-class BreadcrumbsItem extends \PhpTheme\Menu\MenuItem
+class BreadcrumbsItem extends \PhpTheme\Core\MenuItem
 {
 
-    public $attributes = [
-        'class' => 'breadcrumb-item'
-    ];
+    public $attributes = ['class' => 'breadcrumb-item'];
 
     public function toString() : string
     {
         if (!$this->url)
         {
             $this->attributes = HtmlHelper::mergeAttributes($this->attributes, [
-                'class' => ['active'],
+                'class' => [
+                    'active'
+                ],
                 'aria-current' => 'page'
             ]);
         }
 
-        $return = parent::toString();
-
-        return $return;
+        return parent::toString();
     }
 
 }

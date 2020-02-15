@@ -6,12 +6,10 @@
  */
 namespace PhpTheme\Bootstrap4;
 
-use PhpTheme\HtmlHelper\HtmlHelper;
+use PhpTheme\Core\HtmlHelper;
 
-class Message extends \PhpTheme\Tag\Tag
+class Message extends \PhpTheme\Core\Tag
 {
-
-    public $type = 'info';
 
     const TYPE_ERROR = 'error';
 
@@ -19,21 +17,24 @@ class Message extends \PhpTheme\Tag\Tag
 
     const TYPE_SUCCESS = 'success';
 
+    public $theme;
+
+    public $type = 'info';
+
     public $tag = 'div';
 
     public $message;
 
-    public $errorAttributes = [
-        'class' => 'alert alert-danger'
-    ];
+    public $errorAttributes = ['class' => 'alert alert-danger'];
 
-    public $infoAttributes = [
-        'class' => 'alert alert-info'
-    ];
+    public $infoAttributes = ['class' => 'alert alert-info'];
 
-    public $successAttributes = [
-        'class' => 'alert alert-success'
-    ];    
+    public $successAttributes = ['class' => 'alert alert-success'];
+
+    public function getTheme()
+    {
+        return $this->theme;
+    }
 
     public function toString() : string
     {

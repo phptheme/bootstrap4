@@ -6,8 +6,6 @@
  */
 namespace PhpTheme\Bootstrap4;
 
-use PhpTheme\Core\HtmlHelper;
-
 class Theme extends \PhpTheme\Core\Theme
 {
 
@@ -15,30 +13,22 @@ class Theme extends \PhpTheme\Core\Theme
 
     const MESSAGE = Message::class;
 
-    const GRID = Grid::class;    
+    const GRID = Grid::class;
 
-    const GRID_HEADER = GridHeader::class;
+    const MENU = Menu::class;
 
-    const GRID_CELL = GridCell::class;
+    const LINK = Link::class;
 
-    public $breadcrumbsOptions = [];
- 
-    public $tableOptions = [];
-
-    public $messageOptions = [];
+    const POST_LINK = PostLink::class;
 
     public function breadcrumbs(array $options = [])
     {
-        $options = HtmlHelper::mergeOptions($this->breadcrumbsOptions, $options);
-
         return $this->widget(static::BREADCRUMBS, array_merge($options, ['theme' => $this]));
     }
 
     public function message(array $options = [])
     {
-        $options = HtmlHelper::mergeOptions($this->messageOptions, $options);
-
-        return $this->widget(static::MESSAGE, $options);
+        return $this->widget(static::MESSAGE, array_merge($options, ['theme' => $this]));
     }
 
     public function grid(array $params = [])
@@ -46,14 +36,19 @@ class Theme extends \PhpTheme\Core\Theme
         return $this->widget(static::GRID, array_merge($params, ['theme' => $this]));
     }
 
-    public function createGridCell(array $params = [])
+    public function menu(array $params = [])
     {
-        return $this->createWidget(static::GRID_CELL, $params);
+        return $this->widget(static::GRID, array_merge($params, ['theme' => $this]));
     }
 
-    public function createGridHeader(array $params = [])
+    public function link(array $params = [])
     {
-        return $this->createWidget(static::GRID_HEADER, $params);
+        return $this->widget(static::LINK, array_merge($params, ['theme' => $this]));
     }
+
+    public function postLink(array $params = [])
+    {
+        return $this->widget(static::POST_LINK, array_merge($params, ['theme' => $this]));
+    }        
 
 }

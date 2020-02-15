@@ -6,7 +6,7 @@
  */
 namespace PhpTheme\Bootstrap4;
 
-use PhpTheme\HtmlHelper\HtmlHelper;
+use PhpTheme\Core\HtmlHelper;
 
 class Breadcrumbs extends \PhpTheme\Menu\Menu
 {
@@ -17,9 +17,12 @@ class Breadcrumbs extends \PhpTheme\Menu\Menu
 
     public $tag = 'ol';
 
-    public $attributes = [
-        'class' => 'breadcrumb'
-    ];
+    public $attributes = ['class' => 'breadcrumb'];
+
+    public function getTheme()
+    {
+        return $this->theme;
+    }
 
     public function toString() : string
     {
