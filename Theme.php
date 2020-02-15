@@ -13,8 +13,6 @@ class Theme extends \PhpTheme\Core\Theme
 
     const BREADCRUMBS = Breadcrumbs::class;
 
-    const TABLE = Table::class;
-
     const MESSAGE = Message::class;
 
     const GRID = Grid::class;    
@@ -28,13 +26,6 @@ class Theme extends \PhpTheme\Core\Theme
     public $tableOptions = [];
 
     public $messageOptions = [];
-
-    public function table(array $options = [])
-    {
-        $options = HtmlHelper::mergeOptions($this->tableOptions, $options);
-
-        return $this->widget(static::TABLE, array_merge($options, ['theme' => $this]));        
-    }
 
     public function breadcrumbs(array $options = [])
     {
