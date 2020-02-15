@@ -11,6 +11,10 @@ use PhpTheme\Core\HtmlHelper;
 class Grid extends \PhpTheme\Core\Grid
 {
 
+    const GRID_CELL = GridCell::class;
+
+    const GRID_HEADER = GridHeader::class;
+
     public $theme;
 
     public $attributes = [
