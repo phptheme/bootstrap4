@@ -6,8 +6,6 @@
  */
 namespace PhpTheme\Bootstrap4;
 
-use PhpTheme\Core\HtmlHelper;
-
 class Grid extends \PhpTheme\Core\Grid
 {
 
