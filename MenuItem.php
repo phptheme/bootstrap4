@@ -9,7 +9,7 @@ namespace PhpTheme\Bootstrap4;
 class MenuItem extends \PhpTheme\Core\MenuItem
 {
 
-    const SUBMENU = Menu::class;
+    const MENU = Menu::class;
 
     public $tag = 'li';
 
