@@ -13,6 +13,12 @@ class Theme extends \PhpTheme\Core\Theme
 
     const MESSAGE = Message::class;
 
+    const ERROR_MESSAGES = ErrorMessages::class;
+
+    const SUCCESS_MESSAGES = SuccessMessages::class;
+
+    const INFO_MESSAGES = InfoMessages::class;
+
     const GRID = Grid::class;
 
     const MENU = Menu::class;
@@ -49,6 +55,21 @@ class Theme extends \PhpTheme\Core\Theme
     public function postLink(array $params = [])
     {
         return $this->widget(static::POST_LINK, array_merge($params, ['theme' => $this]));
-    }        
+    }
+
+    public function errorMessages(array $params = [])
+    {
+        return $this->widget(static::ERROR_MESSAGES, array_merge($params, ['theme' => $this]));
+    }
+
+    public function infoMessages(array $params = [])
+    {
+        return $this->widget(static::INFO_MESSAGES, array_merge($params, ['theme' => $this]));
+    }
+
+    public function successMessages(array $params = [])
+    {
+        return $this->widget(static::SUCCESS_MESSAGES, array_merge($params, ['theme' => $this]));
+    }
 
 }
